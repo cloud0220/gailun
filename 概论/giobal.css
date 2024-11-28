@@ -1,0 +1,165 @@
+.border-fill{
+    position: relative;
+    background-color: #ffffffb9;
+    background-image:url('a.jpg');
+    border-style: ridge;
+    border-width: 5px;
+    border-color: #172861;border-radius: 5px;border-color: rgba(255, 0.5);
+
+
+}
+.border-fill::before {
+    content: ""; /* 伪元素需要设置内容 */
+    position: absolute; /* 绝对定位 */
+    top: -5px; /* 让伪元素的位置与边框相接 */
+    left: -5px; /* 同样让左边紧贴边框 */
+    right: -5px; /* 右侧同理 */
+    bottom: -5px; /* 底部与边框相接 */
+    background-color: rgba(255, 255, 255, 0.532); /* 填充颜色 */
+    border-radius: 5px; /* 圆角 */
+    z-index: -1; /* 确保伪元素在背景层 */
+}
+h1 {
+    text-align: center;
+    color: #1e0d6b;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    font-style: oblique;
+}
+
+div {
+    width: 500px;
+    border: 10px solid #123384;
+    padding: 25px;
+    margin: 20px auto;
+    background-color: rgba(135, 206, 223, 0.5);
+}
+
+p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(119, 44, 142);
+    text-align: center;
+}
+.none{
+    display: none;
+}
+p1{
+    color : #c974c1;text-align: center;
+}
+.flex{
+    display: flex;
+    flex-direction: row;
+    width: 1300px;
+    border: 10px solid #123384;
+    padding: 25px;
+    margin: 40px auto;
+    background-color: rgba(135, 206, 223, 0.5); 
+}
+.item{
+    width: 500px;
+    border: 10px groove #ec9ce4;border-radius: 10px;
+    padding: 25px;
+    margin: 20px ;
+    background-color: rgba(234, 164, 228, 0.589);
+}
+button {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    touch-action: manipulation;
+   }
+   
+   .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+    transition: transform
+       600ms
+       cubic-bezier(.3, .7, .4, 1);
+   }
+   
+   .edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(
+       to left,
+       hsl(340deg 100% 16%) 0%,
+       hsl(340deg 100% 32%) 8%,
+       hsl(340deg 100% 32%) 92%,
+       hsl(340deg 100% 16%) 100%
+     );
+   }
+   
+   .front {
+    display: block;
+    position: relative;
+    padding: 12px 27px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    color: white;
+    background: hsl(345deg 100% 47%);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform
+       600ms
+       cubic-bezier(.3, .7, .4, 1);
+   }
+   
+   button:hover {
+    filter: brightness(110%);
+   }
+   
+   button:hover .front {
+    transform: translateY(-6px);
+    transition: transform
+       250ms
+       cubic-bezier(.3, .7, .4, 1.5);
+   }
+   
+   button:active .front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+   }
+   
+   button:hover .shadow {
+    transform: translateY(4px);
+    transition: transform
+       250ms
+       cubic-bezier(.3, .7, .4, 1.5);
+   }
+   
+   button:active .shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+   }
+   
+   button:focus:not(:focus-visible) {
+    outline: none;
+   }
+   .life{
+    font-size: 30px;font-family: 'Times New Roman', Times, serif;
+   }
+   .liu{
+    border-radius: 10px;margin-left: 20px;
+   }
+   .xu{
+    border-radius: 10px;margin-left: 20px;
+   }
+   .xue{
+    border-radius: 10px;margin-left: 20px;
+   }
